@@ -22,7 +22,7 @@ public class Transaction {
     private Double amount;
 
     @Column(nullable = false)
-    private String type; // DEPOSIT | WITHDRAW | TRANSFER
+    private String type;
 
     @Column(nullable = false)
     private LocalDateTime createdAt = LocalDateTime.now();

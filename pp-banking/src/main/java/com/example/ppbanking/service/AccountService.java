@@ -45,7 +45,6 @@ public class AccountService {
         return users.count() > 0;
     }
 
-    // ===== Утилиты пользователя/аккаунта =====
     public User getByUsername(String username) {
         return users.findByUsername(username).orElseThrow();
     }
@@ -55,7 +54,6 @@ public class AccountService {
         return new AccountResponse(u.getBalance(), txs.findAllForUser(userId));
     }
 
-    // ===== Операции с балансом =====
     public void deposit(Long userId, double amount) {
         if (amount <= 0) throw new IllegalArgumentException("Amount must be > 0");
         User u = users.findById(userId).orElseThrow();
