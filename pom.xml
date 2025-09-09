@@ -57,8 +57,17 @@
         <dependency>
             <groupId>org.projectlombok</groupId><artifactId>lombok</artifactId><optional>true</optional>
         </dependency>
+        <!-- Spring Boot starter for tests (JUnit 5, AssertJ, etc.) -->
         <dependency>
-            <groupId>org.springframework.boot</groupId><artifactId>spring-boot-starter-test</artifactId><scope>test</scope>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!-- Security testing helpers (if you later use with(jwt()) or security matchers) -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-test</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
