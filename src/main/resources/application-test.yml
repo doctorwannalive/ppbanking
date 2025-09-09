@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:banktest;MODE=PostgreSQL;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+  h2:
+    console:
+      enabled: false
+
+app:
+  jwt:
+    # Must be at least 32 bytes for HS256 HMAC key:
+    secret: "this_is_a_test_secret_that_is_long_enough_123456"
+    accessMillis: 900000
+    refreshMillis: 604800000
